@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>verkefni1 </title>
+		<title>verkefni2 </title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -38,21 +38,109 @@
 						<!-- Post -->
 							<section class="post">
 								<header class="major">
-									<span class="date">No Date</span>
-									<h1>Project 2<br />
+									<span class="date">2. February 2022 </span>
+									<h1>Project 2 manufacturing with a laser cutter and a vinil cutter<br />
 									</h1>
-									<p>To be continued </p>
+									<p>In this project the goal was to use a laser cutter and a vinil cutter to manufacture an object comprised of a few parts with the help of a parametric CAD software. The object should be able to be put together using pressfits or snapfits and no glue or fasteners should be used for the assembly. </p>
 								</header>
-								<div class="image main"><img src="images/pic01.jpg" alt="" /></div>
-								<p>To be continued</p>
+								
+                                <h3>The idea</h3> 
+								<p> When i heard of the project I knew I wanted to make some sort of a board game. My first idea was a chess table with pieces, but after consulting with Hafliði, the teacher of the coure, he felt that the project wasn´t ambitious enough. After a bit of thinking and googling I decided to make a replica of the game Connect four.  </p>
+                                <div class="image main"><img src="Mv2/connect_four1.jpg" alt="" /></div>
+                                <p>If you want to read more abot the game here is the  <a href="https://en.wikipedia.org/wiki/Connect_Four "> Wiki </a>, you can also play the game online <a href="https://www.cbc.ca/kids/games/play/connect-4"> here </a>. 
+                                </p>
+                                <h3>Kerf testing</h3> 
+                                <p>The laser used to laser cut has a small diameter, this diameter is called kerf. When designing for laser cutting you have to adjust for the kerf so your object will come aout of the laser cutter in the shape and dimmensions you intended. In this project I kerf tested with Karl Jakobsson and Dagur Óskarsson.</p>
+                                <p>For the kerf testing we drew a box in Fusion 360. The box had 10 slits. See picture below.</p>
+                                <div class="image main"><img src="Mv2/kerf_profun.JPG" alt="" /></div>
+                                <p>The sketch was then saved as a dxf file and exported to inkscape. In inkscape the lines of the sketch are grouped together and the line weight is set to 0.02. Now the file is ready for laser cutting. The cutting process for the kerf was difficult because the laser cutter needed 3 runs to finally cut the wood used as the material for the test. Pictured below is the kerf test.</p> 
+                                <div class="image main"><img src="Mv2/kerf_profun_real.jpg" alt="" /></div>
+                                <p>After the space that the lazer cut out was messured it was time to calculate the kerf. The width of the small boxes should be 99.975 mm. It is messured to be 97,28. The diffrence is 2,695 mm. The kerf is then 2,695/(number of boxes)= 2,695/10=0,2685 mm. </p>
+                                <p>These were our results for the kerf. Some days later other groups also kerf tested and got a kerf ranging from 0,13 to 0,15. There result made us question our result, naturally. We believe that because the laser needed three runs to cut through the material that it created some sort of error in our messurement. For this project I used 0,1325 mm kerf.</p>
+                                <h3>The Design process</h3>
+                                <p>
+                                The basic design information for Connect Four to work is that it needs two adjacent plates each with 6x7 circular  holes. Between the plates there needs to be a clearence so that the pieces that you use for the game can easily slide down. The pieces will have to stack on top off each other and each column of holes on will have to be divided so that he pieces will stack. The circular holes on the plates must be smaller than the pieces. The game must be able to stand and it has to be easy to get the pieces out after each round. For this project I also was constrained with using at most 500 mm x 500 mm plate to laser cut from. I decided on using acrylic plastic that has a 3 mm thickness. With this information I started sketching on a piece of paper some basic information and ideas. 
+                                </p>
+                                <p>The first idea was to have a third plate that would come between the idendical plates with holes. This plate would make the spece between the colums the pieces woud slide down. </p>
+                                <p>I scraped this idea, because the gap between the plates would be the same as the thickness of the playing pieces. This would not make them slide down easily. Also I initially decided on making the playing pieces 4 cm. in diameter, but that would be to big for the 500 mm x 500 mm plate. So the pieces will have a 3 cm diameter. </p>
+                                <p>This design alows me to customize the width of the gap between the pieces. It also alows me to test some diffrent joints. </p>
+                                <p> After some more sketching I started modeling these parts in fusion. I used parametric design and made my design controlled by the diameter of the playing pieces. Another parameter that was used was the thickness of the material. 
+                                </p>
+                                 <div class="image main"><img src="Mv2/Capture.JPG" alt="" /></div>
+                                <p>After modeling the parts based on the sketch I had to design a way for the diffrent parts to fit together. Pressfit would be used to make the dividers fit to the plates. For the front facing plates to fit to the side plates I decided on using snap fit. For an idea on how to model the snap fit I used the image below. The dimension on the image do not apply for my case </p>
+                                <div class="image main"><img src="Mv2/snap_fit_mynd.png" alt="" /></div>
+                                <p>The next step was to model the snap fit in Fusion. Below is a picture of the CAD model of the four most integral parts. The plate, the side mounting, the column dividers and the bottom plate. </p>
+                                <div class="image main"><img src="Mv2/Ihlutir.JPG" alt="" /></div>
+                                <h3>Getting the CAD model ready for laser cutting</h3>
+                                <p>To get the CAD model redy for laser cutting I used the manufacture for laser cutting tool in Fusion. By using that tool one can easily adjust for the kerf. I used this <a href="https://www.youtube.com/watch?v=D1Btaqhog9E&ab_channel=FabLabAkureyri"> video </a> to learn how to use the manufacture tool. I will not go into detail on how to use the manufacture tool since the video explains it better then I could in this text. After setting up the laser in fusion and and using the manufacture tool. I exported the drawing made by the tool to Inkscape. I then edjusted the lineweight to 0.02 and sent the file to the laser cutter.</p> 
+                                <h3>Testing of snap fits and the design</h3>
+                                <p>Before cutting everything out, and posibly wasting material, I tested the snapfits to make sure that they would work. I set the width of the snap fit to 3 mm and 2 mm to test witch would work better. I also cut out the column divider to see hoe it would fit. See image of what I cut out below. </p>
+                                <div class="image small"><img src="Mv2/Test.JPG"width="" height="500" alt="" /></div>
+                                <p>The pressfit for the dividers worked and the snap fit that used the 3 mm width. See images below for the test.</p>
+                                <div class="box alt">
+										<div class="row gtr-50 gtr-uniform">
+											<div class="col-4"><span class="image fit"><img src="Mv2/pressfit_test.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="Mv2/pressfit_test_2.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="Mv2/pressfit_test_3jpg.jpg" alt="" /></span></div>
+										</div>
+									</div>
+                                <p>However the snapfit that used the 2 mm width failed. </p>
+								 <div class="image small"><img src="Mv2/pressfit_fail.jpg"width="" height="400"  alt="" /></div>
+                                <p>With these test I had what I needed to make design improvements for the final cutout.</p>
+                                <p>The design improvemts that I made were adding a small fillet on the inside of the snapfits to make them stronger. I also made them all have 3 mm width. See image below.</p>
+                                <div class="image small"><img src="Mv2/snap_fit_urbaettur.JPG" width="" height="500" alt="" /></div>
+                                <h3>Manufacture of the final product.</h3>
+                                <p>To manufacture the final product I exported the final file after using the manufacture tool to Inkscape.Below is an image of the final file in inkscape.</p>
+                                <div class="image small"><img src="Mv2/Inkscape_loka.JPG" width="" height="500" alt="" /></div>
+                                <p>The last step was to start putting the pieces together. Here I ran into a problem. When I was using the laser cutter for the final cut there was a small leftover piece drom someone who had used the cutter before me. This small piece made my cut a bit wonky. The snap fits that worked well when I tested them now didn´t seem to fit. </p> 
+                                <p>The pressfit was also hard to put together, more so then when i tested it. A mistake that I made was not to properly check the machine before I used it. Another problem with the design is when all the pressfits come together they strain the plate so it bends. This causes the snapfits to not properly fit.</p>
+                                <p>The acrylic material used is also very brittle, so when straining the material accidents can happen, as you can see below. </p>
+                                <div class="image small"><img src="Mv2/brot.jpg" width="" height="500" alt="" /></div>
+                                <p>I know now how I would improve my design for another iteration. I would decrease the number of snapfits and increase the tolerance for the pressfits. as the great Pitbull would say:</p>
+                                <div class="image small"><img src="Mv2/pitbull_inspo.png" width="" height="500" alt="" /></div>
+                                <p>After some problems fitting the pieces together and, careful handling I mangad to get everything together:</p>
+                                    <div class="box alt">
+										<div class="row gtr-50 gtr-uniform">
+											<div class="col-4"><span class="image fit"><img src="Mv2/final1.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="Mv2/final2.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="Mv2/final3.jpg" alt="" /></span></div>
+										</div>
+									</div>
+                                <h3>Vinyl cutting</h3>
+                                <p>A part of this project was to use a vinil cutter to make stickers. The process is almost identical to the laser cutting, except the manufacturing tool is different. I decided that for this part of the project I would cut out stickers to put on the playing pieces for the connect four that I laser cut.</p>
+                                <p>I used the CAD model of the pieces from the connect four and exported them as a dxf file to inkscape. Then I used the vinil cutter, image below, to cut them out. </p>
+                                <div class="image small"><img src="Mv2/vinil.jpg" width="" height="" alt="" /></div>
+                                <p>After this was a painstaking process of putting the stickers on the pieces. </p>
+                                <div class="box alt">
+										<div class="row gtr-50 gtr-uniform">
+											<div class="col-4"><span class="image fit"><img src="Mv2/lima_stykki.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="Mv2/limmidar.jpg" alt="" /></span></div>
+										</div>
+									</div>
+                                <h3>The Final product</h3>
+                                <div class="box alt">
+										<div class="row gtr-50 gtr-uniform">
+											<div class="col-4"><span class="image fit"><img src="Mv2/final_product.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="Mv2/final_producttt.jpg" alt="" /></span></div>
+											
+										</div>
+									</div>
+                                <p> Overall I am happy with how the connect four turned out. Even though there are some design improvements to be made. To get the files to laser cut my design, or improve it, you can download below.</p>
+                                <ul class="actions">
+										<li><a href="Mv2/loka1.dxf" class="button icon solid fa-download">dxf-file</a></li>
+										<li><a href="Mv2/gata_plata%20v20.step" class="button icon solid fa-download">Step-file</a></li>
+                                        <li><a href="Mv2/loka1.svg" class="button icon solid fa-download">svg-file</a></li>
+									</ul>
+                
 							</section>
+                        
 
 					</div>
 
 
 				<!-- Copyright -->
 					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+						<ul><li>&copy; Hákon Ernir Hrafnsson</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
 					</div>
 
 			</div>
