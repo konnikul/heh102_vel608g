@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>verkefni1 </title>
+		<title>verkefni3 </title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -37,13 +37,78 @@
 						<!-- Post -->
 							<section class="post">
 								<header class="major">
-									<span class="date">No Date</span>
-									<h1>Project 3<br />
+									<span class="date">1. March 2022</span>
+									<h1>Prjocect 3: 3d printing and 3d scanning.<br />
 									</h1>
-									<p>To be continued </p>
+									<p>The goal of this assignment was to create a 3d object that could not be made with subtractive manufacturing and use a 3d printer to manufacture the object. Another part of the assignment was to 3d scan an object.  </p>
 								</header>
-								<div class="image main"><img src="images/pic01.jpg" alt="" /></div>
-								<p>To be continued</p>
+                                <h3>The idea</h3>
+                                <p>My first idea was to make a similar planter to this dinosaur planter</p>
+								<div class="image main"><img src="Mv3/risaedla_hugmynd.jpg" alt="" /></div>
+								<p>But after some initial tries with the CAD software that I am experienced with, Fusion 360 and Inventor, I gave up on it. To CAD model something that is as curved and looks organic is very hard and if I wanted to make it look good would have to use Blender or a similar 3d modeling program. Since I am not experienced in using such programs, I started searching for other ideas to print. I googled “3d-printing ideas”. I found an <a href="https://www.format.com/magazine/resources/design/3d-printer-designs  "> article </a>, after scrolling through the article and looking at some of the ideas there I decided to redesign this <a href="https://cults3d.com/en/3d-model/home/plantygon-modular-geometric-stacking-planter-for-succulents "> planter </a> </p>
+                                <div class="image main"><img src="Mv3/plantygon1.webp" alt="" /></div>
+                                <p>This planter can not be easily manufactured with subtractive manufacturing, so it fulfills the assignment requirements.</p>
+                                <h3>The design process</h3>
+                                <p>I used Fusion 360 to make a 3d-model that could be used for 3d printing. I will not go into the details of the drawing process here. Below is a gif that show how the drawing was created over time. </p>
+                                <div class="image main"><img src="Mv3/honnun.gif" alt="" /></div>
+                                
+                                <p>To see how the 3d-printer would agree with my design I connected the <a href="https://www.prusa3d.com/page/prusaslicer_424/ "> PrusaSlicer </a> application to Fusion 360. This makes it easy to slice and check my design easily. I used this video <a href="https://www.youtube.com/watch?v=Ws1TiTyolsw&ab_channel=thehardwareguy"> PrusaSlicer </a> to automatically connect the program to Fusion. </p>
+                                <p>I then exported my design to Prusa slicer and selected the 3d-printer I would use, the Original Prusa i3 MKS3S+. By doing this the printer settings are automatically set for my case. I knew that the printer was limited to printing a 20x20x20 cm object. So, I used that in my design. </p>
+                                <div class="box alt">
+										<div class="row gtr-50 gtr-uniform">
+											<div class="col-4"><span class="image fit"><img src="Mv3/breidd.JPG" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="Mv3/haed.JPG" alt="" /></span></div>
+										</div>
+									</div>
+                                <p>Another limit made in this assignment was to only use 100 grams of plastic.  After slicing my original design, I did not meet that limit even with no supports, see image below</p>
+                                <div class="image main"><img src="Mv3/fyrsta_slice_bleh.JPG" alt="" /></div>
+                                <p>Since the material use was way too much and the printing time was very long (I do not want to be a complete dick and occupy the printer for a whole day, other students also must use it) I decided to scale down my model. This is more a proof of concept rather than the actual planter; it has to be bigger to make room for the plants. So, after scaling down to these dimensions: </p>
+                                 <div class="box alt">
+										<div class="row gtr-50 gtr-uniform">
+											<div class="col-4"><span class="image fit"><img src="Mv3/prent_scale.JPG" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="Mv3/prent_scale2.JPG" alt="" /></span></div>
+										</div>
+									</div>
+                                <p>I had a more manageable printing time and the material used would not exceed the limit, see image below form slicer: </p>
+                                <h3>Testing the capabilities of the 3d printer</h3>
+                                <p>Now I needed to know how the printer performed and how it would manage printing such complex geometry. For the test I worked with Ingi Þór Ólafsson. I needed to test the overhang and bridging capabilities of the printer. For my object the printer would need to be able to print 30 mm bridge and a 45° overhang. We tested this with the following 3d-printer <a href="https://www.thingiverse.com/thing:2656594?fbclid=IwAR2zwpAh3MijSGtH1hGiSR9URtQ5HUQBvFXWMzlQikaT8pwgArVKdKFJSfg "> Test </a> </p>
+                                <p>And then we designed our own to test the bridging. Below are the results of the test. </p>
+                                <div class="box alt">
+										<div class="row gtr-50 gtr-uniform">
+											<div class="col-4"><span class="image fit"><img src="Mv3/Bridge_1.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="Mv3/Overhang_2.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="Mv3/Overhang_1.jpg" alt="" /></span></div>
+										</div>
+									</div>
+                                <p>As is evident from the test above the printer should be more then capable of handling the 30 mm bridge and the 45° overhang. </p>
+                                <h3>3d-Printing and the final product </h3>
+                                <p>After slicing the object and getting the G-code for it I uploaded it to the printer and started the print. Below are some photos from this process. </p>
+                                <div class="box alt">
+										<div class="row gtr-50 gtr-uniform">
+											<div class="col-4"><span class="image fit"><img src="Mv3/prenti_kall.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="Mv3/Ingi.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="Mv3/ready_ad_prenta.jpg" alt="" /></span></div>
+										</div>
+									</div>
+                                <p>Below is a picture of the final product</p>
+                                <div class="image main"><img src="Mv3/Loka_afurd.jpg" alt="" /></div>
+                                <p>The overhang nd bridging test showed that the printer should be able to 3d-print the object easily, however there are visible flaws in the print. See images below </p>
+                                 <div class="box alt">
+										<div class="row gtr-50 gtr-uniform">
+											<div class="col-4"><span class="image fit"><img src="Mv3/Gallar_1.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="Mv3/Gallar_2.jpg" alt="" /></span></div>
+										</div>
+									</div>
+                                <p>Perhaps the length of the overhang and the combination of the overhang and bridging may explain these flaws. My plan is to print the original size and not the scaled down model in the future. When I do that I must use supports, since the size is bigger, and to combat these small flaws in the print. </p>
+                                
+                                <h3>3d-scanning.</h3>
+                                
+                                <h3>Design files</h3>
+                                Below are links to the design files for this project. 
+                                 <ul class="actions">
+										<li><a href="Mv3/blomapottur%20v8.step" class="button icon solid fa-download">Real size model step-file</a></li>
+										<li><a href="Mv3/blomapottur_test_staerd.step" class="button icon solid fa-download"> Scaled down model step -file</a></li>
+									</ul>
 							</section>
 
 					</div>
